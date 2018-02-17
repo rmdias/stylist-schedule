@@ -1,0 +1,37 @@
+.app-landing-page {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: #F6F6F6;
+  text-align: center;
+}
+
+.app-landing-page--tile {
+  padding-top: 14em;
+}
+
+.app-landing-page--tile span {
+  display: block;
+}
+
+.app-landing-page--tile-small {
+  font-size: 14px;
+}
+
+.app-landing-page--tile-medium {
+  font-size: 14px;
+  text-transform: uppercase;  
+}
+
+.app-landing-page--tile-large {
+  font-size: 36px;
+  padding: 15px 0;
+}
+
+.app-landing-page--button {
+  width: 200px;
+  margin-top: 20px;
+}
