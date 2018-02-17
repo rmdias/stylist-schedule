@@ -1,0 +1,74 @@
+.app-progress-bar {
+  width: 280px;
+  margin: 20px auto 0 auto;
+}
+  
+.app-progress-bar--stage {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  float: left;
+  border: 2px solid #F0F0F0; /* Light grey */
+  background-repeat: no-repeat;
+}
+
+.app-progress-bar--stage:before {
+  background-repeat: no-repeat;
+}
+
+.stage-1 {
+  background-image: url('assets/images/shortt.svg');
+  background-size: 19px;
+  background-position: 8px 5px;
+}
+
+.stage-2 {
+  background-image: url('assets/images/user.svg');
+  background-size: 25px;
+  background-position: 6px 4px;
+}
+
+.stage-3 {
+  transform: rotate(45deg);
+}
+
+.progress-25 {
+  border-top: 2px solid #407FA0; /* Blue */
+}
+
+.progress-50 {
+  border-top: 2px solid #407FA0; /* Blue */
+  border-right: 2px solid #407FA0;
+}
+
+.progress-75 {
+  border-top: 2px solid #407FA0; /* Blue */
+  border-right: 2px solid #407FA0;
+  border-bottom: 2px solid #407FA0; 
+}
+
+.progress-100 {
+  border: 2px solid #407FA0; /* Blue */
+}
+
+.stage-3:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 29px;
+  height: 21px;
+  z-index: -1;
+  background-image: url('assets/images/boxxx.svg');
+  background-size: 23px;
+  transform: rotate(-45deg);
+}
+
+.app-progress-bar--spacer {
+  width: 80px;
+  height: 2px;
+  background: #407FA0;
+  float: left;
+  transform: translate(0px, 17px);
+}
+
