@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/GothamBold.woff2') format('woff2'),
+      url('assets/fonts/GothamBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('assets/fonts/OpenSans.woff2') format('woff2'),
+      url('assets/fonts/OpenSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html {
+  font-family: 'Open Sans';
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gotham';  
+}
+
+.app-button {
+  display: inline-block;
+  background: #2880A3;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Gotham';  
+  font-size: 14px;
+  padding: 17px;  
+}
