@@ -1,0 +1,39 @@
+.app-header {
+  width: 100%;
+  padding: 10px;  
+  background-color: #222;
+  position: relative;
+}
+
+.app-logo {
+  display: inline-block;
+}
+
+.app-logo--link {
+  width: 210px;
+  height: 30px;
+  display: inline-block;
+  background: transparent url('assets/images/logo-inverse@2x.jpg');
+  background-size: 100%;
+  text-indent: -999px;
+  overflow: hidden;
+}
+
+.app-header--toggle {
+  padding: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.app-header--toggle--bar {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px;
+  background: #fff;
+  display: block;
+}
+
+.app-header--toggle--bar:last-child {
+  margin-bottom: 0;
+}
