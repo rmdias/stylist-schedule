@@ -11,7 +11,7 @@ import { SuccessComponent } from './components/success/success.component';
 
 // Components
 import { TopBarComponent } from './components/top-bar/top-bar.component';
-
+import { OrderProgressBarComponent } from './components/order-progress-bar/order-progress-bar.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/landing-page',  pathMatch: 'full' },
@@ -23,11 +23,13 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    
     LandingPageComponent,
     ScheduleComponent,
     SuccessComponent,
 
-    TopBarComponent    
+    TopBarComponent,
+    OrderProgressBarComponent  
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
