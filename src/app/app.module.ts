@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -13,6 +14,7 @@ import { SuccessComponent } from './components/success/success.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { OrderProgressBarComponent } from './components/order-progress-bar/order-progress-bar.component';
 import { StylistQuestionComponent } from './components/stylist-question/stylist-question.component';
+import { MoreDetailsComponent } from './components/more-details/more-details.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/landing-page',  pathMatch: 'full' },
@@ -31,11 +33,13 @@ const appRoutes: Routes = [
 
     TopBarComponent,
     OrderProgressBarComponent,
-    StylistQuestionComponent  
+    StylistQuestionComponent,
+    MoreDetailsComponent  
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { TestBed, async } from '@angular/core/testing';
 
@@ -10,6 +12,7 @@ import { SuccessComponent } from './components/success/success.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { OrderProgressBarComponent } from './components/order-progress-bar/order-progress-bar.component';
 import { StylistQuestionComponent } from './components/stylist-question/stylist-question.component';
+import { MoreDetailsComponent } from './components/more-details/more-details.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/landing-page',  pathMatch: 'full' },
@@ -29,10 +32,13 @@ describe('AppComponent', () => {
     
         TopBarComponent,
         OrderProgressBarComponent,
-        StylistQuestionComponent
+        StylistQuestionComponent,
+        MoreDetailsComponent
       ],
       imports: [
-        RouterModule.forRoot(appRoutes)  
+        RouterModule.forRoot(appRoutes),
+        BrowserModule,
+        FormsModule
       ],
       providers: [
         { provide: APP_BASE_HREF, useValue : '/' }

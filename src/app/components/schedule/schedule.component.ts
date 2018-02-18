@@ -15,7 +15,8 @@ export class ScheduleComponent {
   }
 
   orderData = {
-    hasAppointment: false
+    hasAppointment: false,
+    orderDetails: ''
   }
 
   constructor() { } 
