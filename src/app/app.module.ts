@@ -15,6 +15,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { OrderProgressBarComponent } from './components/order-progress-bar/order-progress-bar.component';
 import { StylistQuestionComponent } from './components/stylist-question/stylist-question.component';
 import { MoreDetailsComponent } from './components/more-details/more-details.component';
+import { PhoneInfoComponent } from './components/phone-info/phone-info.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/landing-page',  pathMatch: 'full' },
@@ -34,7 +35,8 @@ const appRoutes: Routes = [
     TopBarComponent,
     OrderProgressBarComponent,
     StylistQuestionComponent,
-    MoreDetailsComponent  
+    MoreDetailsComponent,
+    PhoneInfoComponent  
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

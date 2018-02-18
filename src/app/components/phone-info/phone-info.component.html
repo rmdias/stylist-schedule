@@ -1,0 +1,17 @@
+<p class="app-mobile-info--text">
+  Schedule a call with your stylist at a time to suit you, to talk about your order, style and preferences.
+</p>
+
+<h3 class="app-mobile-info--title">
+  Contact telephone number
+</h3>
+
+<label for="phoneInfo" class="app-mobile-info--country-code">
+  {{orderData.phoneInfo.name}} ({{orderData.phoneInfo.code}})
+
+  <select name="phoneInfo" id="phoneInfo" [(ngModel)]="orderData.phoneInfo">
+    <option *ngFor="let c of countriesList" [ngValue]="c">{{c.name}} {{c.code}}</option>
+  </select>
+</label>
+
+<input type="tel" class="app-mobile-info--country-number" placeholder="Phone number" [(ngModel)]="orderData.phoneInfo.number">

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { personalisationProgress } from '../order-progress-bar/personalisation-progress.interface';
+import { CountriesList } from '../phone-info/country-codes';
 
 @Component({
   templateUrl: './schedule.component.html',
@@ -16,7 +17,8 @@ export class ScheduleComponent {
 
   orderData = {
     hasAppointment: false,
-    orderDetails: ''
+    orderDetails: '',
+    phoneInfo: CountriesList[1]
   }
 
   constructor() { } 

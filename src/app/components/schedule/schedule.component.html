@@ -5,4 +5,9 @@
 
 <app-stylist-question [orderData]="orderData"></app-stylist-question>
 
+<app-phone-info
+  *ngIf="orderData.hasAppointment"
+  [orderData]="orderData">
+</app-phone-info>
+
 <app-more-details [orderData]="orderData"></app-more-details>
