@@ -1,0 +1,129 @@
+:host {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+.app-appointment-dates--title {
+  padding-left: 20px;  
+}
+
+.app-appointment-dates--days-canvas {
+  width: 250px;
+  margin-top: 10px;
+  overflow: hidden;
+  display: inline-block;  
+}
+
+.app-appointment-dates--days-list {
+  width: 140%;
+}
+
+.app-appointment-dates--days {
+  text-align: center;
+}
+
+.app-appointment-dates--days-control {
+  display: inline-block;
+}
+
+.control-left {
+  width: 30px;
+  height: 56px;
+  background: url('assets/images/left.svg'); 
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.control-right {
+  width: 30px;
+  height: 56px;
+  background: url('assets/images/right.svg'); 
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.app-appointment-dates--days-list {
+  display: inline-block;
+  text-align: left;
+}
+
+.app-appointment-dates--day-button {
+  display: inline-block;
+  border: 1px solid #cdcccc;
+  border-radius: 2px;
+  padding: 10px;  
+  margin-right: 3px;
+  text-align: center;
+}
+
+.is-selected {
+  background: rgba(40,128,163, .2);
+  border: 1px solid rgb(40,128,163);
+}
+
+.day-button--detail {
+  display: block;
+}
+
+.day-button--detail.short {
+  font-size: 14px;
+}
+
+.day-button--detail.long {
+  font-size: 10px;  
+  padding-bottom: 8px;
+}
+
+.app-appointment-dates--timetable {
+  width: 100%;
+  min-width: 320px;
+  padding: 0 20px;
+  margin-top: 8px;
+}
+
+.app-appointment-dates--timetable-item {
+  padding: 11px 0;
+  border-bottom: 1px solid #cdcccc;
+  position: relative;
+  font-weight: 800;
+  font-size: 16px;
+} 
+
+.scheduled {
+  color: #2880A3;
+  border-bottom: 1px solid #cdcccc;
+}
+
+.app-appointment-dates--timetable-item:last-child {
+  border: none;
+}
+
+.app-appointment-dates--timetable-item::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid #2880A3;
+  transition: background .25s linear;
+}
+
+.scheduled::after {
+  background: #2880A3;  
+}
+
+.app-appointment-dates--no-available-slots {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 12px 30px;
+  text-align: center;
+}
+
+.app-appointment-dates--no-available-slots strong {
+  padding: 20px 0 40px 0;
+  display: block;
+}

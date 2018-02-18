@@ -18,7 +18,11 @@ export class ScheduleComponent {
   orderData = {
     hasAppointment: false,
     orderDetails: '',
-    phoneInfo: CountriesList[1]
+    phoneInfo: CountriesList[1],
+    timeSlot: {
+      start: '',
+      date: ''
+    }
   }
 
   constructor() { } 

@@ -10,4 +10,9 @@
   [orderData]="orderData">
 </app-phone-info>
 
+<app-appointment-dates 
+  *ngIf="orderData.hasAppointment"
+  [orderData]="orderData">
+</app-appointment-dates>
+
 <app-more-details [orderData]="orderData"></app-more-details>

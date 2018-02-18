@@ -1,0 +1,38 @@
+<h3 class=app-appointment-dates--title>Pick a day and time</h3>
+
+<div class="app-appointment-dates--days" *ngIf="timeSlots">
+  <button class="app-appointment-dates--days-control control-left" (click)="previousTimeSlotsPage()"></button>
+
+  <div class="app-appointment-dates--days-canvas">
+    <ul class="app-appointment-dates--days-list">
+      <li
+        class="app-appointment-dates--day-button is-selected"
+        [ngClass]="{'is-selected': currentDay.id === timeSlot.id}"
+        *ngFor="let timeSlot of timeSlots[currentPage]"
+        (click)="selectDay(timeSlot)"
+      >
+        <span class="day-button--detail long">{{timeSlot.weekDay}}</span>
+        <h4 class="day-button--detail short">{{timeSlot.abbreviatedDate}}</h4>
+      </li>
+    </ul>
+  </div>
+  
+  <button class="app-appointment-dates--days-control control-right" (click)="nextTimeSlotsPage()"></button>
+</div>
+
+<ul class="app-appointment-dates--timetable">
+  <div *ngIf="!currentDay; else elseBlock"></div>
+  <ng-template #elseBlock>
+    <li 
+      class="app-appointment-dates--timetable-item scheduled"
+      (click)="selectTimeSlot(slot)"
+      [ngClass]="{'scheduled': (orderData.timeSlot.date === currentDay.date) && (slot.start === orderData.timeSlot.start)}"
+      *ngFor="let slot of currentDay.slots">
+      {{slot.start}}
+    </li>
+  </ng-template> 
+  
+  <p class="app-appointment-dates--no-available-slots" *ngIf="currentDay && !currentDay.slots.length">
+    Sorry there are no available slots on {{currentDay.weekDay}}, {{currentDay.abbreviatedDate}}. <br> <strong>Please select another day.</strong>
+  </p>
+</ul>

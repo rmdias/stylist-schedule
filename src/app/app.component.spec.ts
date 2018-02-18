@@ -14,6 +14,9 @@ import { OrderProgressBarComponent } from './components/order-progress-bar/order
 import { StylistQuestionComponent } from './components/stylist-question/stylist-question.component';
 import { MoreDetailsComponent } from './components/more-details/more-details.component';
 import { PhoneInfoComponent } from './components/phone-info/phone-info.component';
+import { AppointmentDatesComponent } from './components/appointment-dates/appointment-dates.component';
+
+import { AppointmentDatesService } from './components/appointment-dates/appointment-dates.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/landing-page',  pathMatch: 'full' },
@@ -35,7 +38,8 @@ describe('AppComponent', () => {
         OrderProgressBarComponent,
         StylistQuestionComponent,
         MoreDetailsComponent,
-        PhoneInfoComponent
+        PhoneInfoComponent,
+        AppointmentDatesComponent
       ],
       imports: [
         RouterModule.forRoot(appRoutes),
@@ -43,7 +47,8 @@ describe('AppComponent', () => {
         FormsModule
       ],
       providers: [
-        { provide: APP_BASE_HREF, useValue : '/' }
+        { provide: APP_BASE_HREF, useValue : '/' },
+        AppointmentDatesService
       ]
     }).compileComponents();
   }));
