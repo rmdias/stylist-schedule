@@ -9,6 +9,7 @@ import { ScheduleComponent } from './components/schedule/schedule.component';
 import { SuccessComponent } from './components/success/success.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { OrderProgressBarComponent } from './components/order-progress-bar/order-progress-bar.component';
+import { StylistQuestionComponent } from './components/stylist-question/stylist-question.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/landing-page',  pathMatch: 'full' },
@@ -27,7 +28,8 @@ describe('AppComponent', () => {
         SuccessComponent,
     
         TopBarComponent,
-        OrderProgressBarComponent  
+        OrderProgressBarComponent,
+        StylistQuestionComponent
       ],
       imports: [
         RouterModule.forRoot(appRoutes)  

@@ -1,0 +1,16 @@
+<article class="app-stylist-question">
+  <div class="app-stylist-question--picture">
+    <img src="assets/images/stylist_image.png" alt="Julia, Stylist">    
+  </div>
+  <div class="app-stylist-question--text">
+    <h3>
+      Would you like to schedule a call whit your stylist before they pack your box?
+    </h3>
+
+    <button 
+      class="app-button app-button-frame app-stylist-question--button"
+      [ngClass]="{'has-stylist-appointment': orderData.hasAppointment}"
+      (click)="toggleAppointment()"
+    >Yes, please!</button>
+  </div>
+</article>

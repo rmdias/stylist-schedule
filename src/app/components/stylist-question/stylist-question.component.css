@@ -1,0 +1,62 @@
+.app-stylist-question {
+  width: 100%;
+  min-width: 320px;
+  padding: 70px 20px 20px 20px;
+}
+
+.app-stylist-question--picture {
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  overflow: hidden;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.app-stylist-question--picture img {
+  width: 100%;
+}
+
+.app-stylist-question--text {
+  width: calc(100% - 73px);
+  padding-left: 10px;
+  display: inline-block;  
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.app-stylist-question--button {
+  width: 215px;
+  padding-left: 39px;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+}
+
+.app-stylist-question--button::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: 20px;
+  height: 20px;
+  background-image: url('assets/images/calendar-icon.svg');
+  background-size: contain;
+}
+
+.app-stylist-question--button::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid #2880A3;
+  transition: background .25s linear;
+}
+
+.app-stylist-question--button.has-stylist-appointment::after {
+  background: #2880A3;  
+}

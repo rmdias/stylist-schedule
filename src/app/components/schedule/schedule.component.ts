@@ -7,9 +7,16 @@ import { personalisationProgress } from '../order-progress-bar/personalisation-p
   styleUrls: ['./schedule.component.css']
 })
 export class ScheduleComponent {
+
   personalisationProgress:personalisationProgress = {
     style: 'progress-100',
     profile: 'progress-100',
     box: 'progress-25'
   }
+
+  orderData = {
+    hasAppointment: false
+  }
+
+  constructor() { } 
 }
