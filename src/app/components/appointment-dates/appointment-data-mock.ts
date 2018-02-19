@@ -1,0 +1,37 @@
+export const AppointmentsMock = [  
+  {  
+     "stylist":"Ligia",
+     "date":"2018-02-19",
+     "slot":"08:30",
+     "orderConfirmationComment":"TEXT",
+     "phone":"+492345678987"
+  },
+  {  
+     "stylist":"Antonella",
+     "date":"2018-02-19",
+     "slot":"08:00",
+     "orderConfirmationComment":"TEXT",
+     "phone":"+492345678987"
+  },
+  {  
+     "stylist":"Sebastian",
+     "date":"2018-02-19",
+     "slot":"09:30",
+     "orderConfirmationComment":"TEXT",
+     "phone":"+492345678987"
+  },
+  {  
+     "stylist":"Shaun",
+     "date":"2018-02-20",
+     "slot":"09:30",
+     "orderConfirmationComment":"TEXT",
+     "phone":"+49123456789"
+  },
+  {  
+     "stylist":"Felipe",
+     "date":"2018-02-19",
+     "slot":"08:30",
+     "orderConfirmationComment":"123456789",
+     "phone":"+49123456789"
+  }
+]

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const API_URL = 'https://nrg-frontend-task-api.herokuapp.com'
+import { API_URL } from '../../API_URL';
 
 @Injectable()
 export class AppointmentDatesService {
@@ -10,7 +10,11 @@ export class AppointmentDatesService {
     private http: HttpClient
   ) { }
   
-  getTimeSlots(): any {
+  getTimeSlots(): Promise<any> {
     return this.http.get(`${API_URL}/timeslots`).toPromise();
+  }
+
+  getAppointments(): Promise<any> {
+    return this.http.get(`${API_URL}/appointments`).toPromise();
   }
 }

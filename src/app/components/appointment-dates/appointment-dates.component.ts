@@ -12,6 +12,7 @@ import { DatePipe } from '@angular/common';
 })
 export class AppointmentDatesComponent implements OnInit {
 
+  appointments: any[];
   timeSlots: any[];
   currentDay: any;
   currentTimeSlot: any;
@@ -27,7 +28,7 @@ export class AppointmentDatesComponent implements OnInit {
   @Input() orderData;
 
   ngOnInit() {
-    this.loadTimeSlots();
+    this.loadAppointments();
   }
 
   selectDay(day): void {
@@ -53,10 +54,46 @@ export class AppointmentDatesComponent implements OnInit {
 
   private loadTimeSlots(): void {
     this.appointmentDatesService.getTimeSlots().then((data) => {
-      this.timeSlots = this.createTimeSlotsPagination(this.formatDates(data));
+      let freeTimeSlots = this.filterFreeAppointments(data, this.appointments);
+
+      this.timeSlots = this.createTimeSlotsPagination(this.formatDates(freeTimeSlots));
       this.currentDay = this.timeSlots[0][0];
       this.orderData.timeSlot.date = this.currentDay.date;
     });
+  }
+
+  private loadAppointments(): void {
+    this.appointmentDatesService.getAppointments().then((data) => {
+      this.appointments = data;
+      this.loadTimeSlots();      
+    });
+  }
+
+  private filterFreeAppointments(timeSlots: any[], appointments: any[]) {
+    let filtredTimeSlots = [];
+
+    let removeBookedAppointments = (timeSlotDate, timeSlot) => {
+      for (let j = 0; j < appointments.length; j++) {
+        if (timeSlotDate === appointments[j].date) {
+          if (timeSlot.start === appointments[j].slot) return false;
+        }
+      }
+      return true;
+    }
+
+    let filterFreeSlots = (timeSlot) => {
+      return timeSlot.slots.filter((slot) => {
+        return removeBookedAppointments(timeSlot.date, slot);
+      });
+    };
+
+    for (let i = 0; i < timeSlots.length; i++) {
+      let timeSlot = timeSlots[i];
+      timeSlot.slots = filterFreeSlots(timeSlot);
+      filtredTimeSlots.push(timeSlot)
+    }
+
+    return filtredTimeSlots;
   }
 
   private formatDates(timeSlots: any[]) {
@@ -96,5 +133,7 @@ export class AppointmentDatesComponent implements OnInit {
 
     return arrays;
   }
+
+
 
 }
