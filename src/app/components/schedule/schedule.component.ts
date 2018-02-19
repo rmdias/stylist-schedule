@@ -56,7 +56,6 @@ export class ScheduleComponent {
     }
 
     let successCallback = (data) => {
-      console.log(data)
       localStorage.setItem('outfitteryOrderData', JSON.stringify(data));
       this.router.navigate(['/success']);
     };

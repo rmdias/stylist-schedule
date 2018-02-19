@@ -21,13 +21,13 @@
 }
 
 .app-header--toggle {
+  background: transparent;  
   padding: 16px;
   position: absolute;
   right: 0;
   top: 0;
   -webkit-appearance: none;
   border: none;
-  background: #0000;
 }
 
 .app-header--toggle--bar {
