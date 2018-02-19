@@ -1,14 +1,17 @@
 export const CountriesList = [
   {
     "code": "+55",
-    "name": "Brazil"
+    "name": "Brazil",
+    "number": ""
   },
   {
     "code": "+49",
-    "name": "Germany"
+    "name": "Germany",
+    "number": ""    
   },
   {
     "code": "+48",
-    "name": "Poland"
+    "name": "Poland",
+    "number": ""    
   }
 ]

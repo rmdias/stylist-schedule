@@ -43,6 +43,8 @@ button {
   font-family: 'Gotham';  
   font-size: 14px;
   padding: 17px;  
+  border-radius: 2px;  
+  vertical-align: top;
 }
 
 .app-button-frame {
@@ -50,8 +52,7 @@ button {
   border: 1px solid #2880A3;
   color: #333;
   font-family: 'Open Sans';
-  padding: 10px 14px;  
-  border-radius: 2px;
+  padding: 10px 14px;
   text-align: left;
   text-transform: none;
 }

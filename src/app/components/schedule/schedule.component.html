@@ -16,3 +16,15 @@
 </app-appointment-dates>
 
 <app-more-details [orderData]="orderData"></app-more-details>
+
+<div class="app-schedule--controls">
+  <a class="app-button app-button-frame app-schedule--back" routerLink="/">
+    Back to landing page
+  </a>
+
+  <button 
+    [ngClass]="{'is-invalid': !isValidOrder()}"
+    class="app-button app-schedule--confirm-order">
+    Confirm order
+  </button>
+</div>

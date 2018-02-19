@@ -26,4 +26,18 @@ export class ScheduleComponent {
   }
 
   constructor() { } 
+
+  isValidOrder(): boolean {
+    let hasValidDate = this.orderData.timeSlot.date.length > 0;
+    let hasValidTime = this.orderData.timeSlot.start.length > 0;
+    let hasValidPhoneCode = this.orderData.phoneInfo.code.length > 0;
+    let hasValidPhoneNumber = this.orderData.phoneInfo.number.length > 0;
+
+    if ( !this.orderData.hasAppointment ) return true;
+    if ( !hasValidDate || !hasValidTime ) return false;
+    if ( this.orderData.hasAppointment && !hasValidPhoneCode ) return false;
+    if ( this.orderData.hasAppointment && !hasValidPhoneNumber )return false;
+
+    return true
+  }
 }
