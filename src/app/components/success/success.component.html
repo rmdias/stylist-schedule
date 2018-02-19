@@ -1,1 +1,47 @@
-<h1>landing-page</h1>
+<app-order-progress-bar
+  class="app-success--progress-bar"
+  *ngIf="personalisationProgress"
+  [personalisationProgress]="personalisationProgress">
+</app-order-progress-bar>
+
+<div class="app-success--picture">
+  <img src="assets/images/stylist_image.png" alt="Julia, Stylist">    
+</div>
+
+<h3 class="app-success--title" *ngIf="hasAppointment else elseBlock">
+  Thank you very much! You have a call booked with {{lastOrder.stylist}} on the {{lastOrder.date | date:'dd.MM.yyyy'}} at {{lastOrder.slot}}
+</h3>
+
+<ng-template #elseBlock>
+  <h3 class="app-success--title">Thank you very much! Julia will now start putting together your OUTFITTERY BOX.</h3>    
+</ng-template> 
+
+<div class="app-success-details">
+  <p class="app-success-details--section-tile">Your order details</p>
+  <dl class="app-success-details--list">
+    <dt class="app-success-details--payment">
+      <h5 class="app-success-details--title">Payment Method: <br>  MasterCard</h5>
+    </dt>
+    <dd>**** **** **** 8776</dd>
+    <dt class="app-success-details--delivery">
+      <h5 class="app-success-details--title">Delivery Address</h5>
+    </dt>
+    <dd>Josh Homme c/0 Miller <br> Görlitzer str 55 <br> 10997 Berlin, Germany</dd>
+    <dt class="app-success-details--billing">
+      <h5 class="app-success-details--title">Billing Address</h5>
+    </dt>
+    <dd>Josh Homme c/0 Miller <br> Görlitzer str 55 <br> 10997 Berlin, Germany</dd>
+    <dt class="app-success-details--calendar">
+      <h5 class="app-success-details--title">Add call date to calendar</h5>
+    </dt>
+    <dd>
+      <p>+ Google Calendar</p>
+      <p>+ Outlook</p>
+      <p>+ Apple iCal</p>
+    </dd>
+  </dl>
+</div>
+
+<a class="app-button app-success--account" routerLink="/">
+  Go to account
+</a>

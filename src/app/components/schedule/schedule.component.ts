@@ -50,11 +50,14 @@ export class ScheduleComponent {
   createAppointment(): void {
     if (!this.isValidOrder) return;
     if (this.isValidOrder && !this.orderData.hasAppointment) {
+      localStorage.setItem('outfitteryOrderData', JSON.stringify(this.orderData));      
       this.router.navigate(['/success']);
       return;
     }
 
     let successCallback = (data) => {
+      console.log(data)
+      localStorage.setItem('outfitteryOrderData', JSON.stringify(data));
       this.router.navigate(['/success']);
     };
 
