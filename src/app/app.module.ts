@@ -22,6 +22,7 @@ import { PhoneInfoComponent } from './components/phone-info/phone-info.component
 import { AppointmentDatesComponent } from './components/appointment-dates/appointment-dates.component';
 
 import { AppointmentDatesService } from './components/appointment-dates/appointment-dates.service';
+import { ScheduleService } from './components/schedule/schedule.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/landing-page',  pathMatch: 'full' },
@@ -52,8 +53,8 @@ const appRoutes: Routes = [
     FormsModule,
   ],
   providers: [
-    AppointmentDatesService
-   
+    AppointmentDatesService,
+    ScheduleService
   ],
   bootstrap: [AppComponent]
 })

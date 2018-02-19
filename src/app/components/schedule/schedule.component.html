@@ -23,8 +23,9 @@
   </a>
 
   <button 
+    class="app-button app-schedule--confirm-order"
     [ngClass]="{'is-invalid': !isValidOrder()}"
-    class="app-button app-schedule--confirm-order">
+    (click)="createAppointment()">
     Confirm order
   </button>
 </div>
