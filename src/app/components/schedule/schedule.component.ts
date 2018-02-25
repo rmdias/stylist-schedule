@@ -48,12 +48,12 @@ export class ScheduleComponent {
   }
 
   createAppointment(): void {
-    if (!this.isValidOrder) return;
-    if (this.isValidOrder && !this.orderData.hasAppointment) {
+    if (!this.isValidOrder()) return;
+    if (this.isValidOrder() && !this.orderData.hasAppointment) {
       localStorage.setItem('outfitteryOrderData', JSON.stringify(this.orderData));      
       this.router.navigate(['/success']);
       return;
-    }
+    };
 
     let successCallback = (data) => {
       localStorage.setItem('outfitteryOrderData', JSON.stringify(data));
@@ -61,7 +61,7 @@ export class ScheduleComponent {
     };
 
     let errorCallback = (err) => {
-      alert(err.data);
+      alert('Did you remember to write a phone number and pick up an appointment date?');
     };
 
     let appointmentData = {
