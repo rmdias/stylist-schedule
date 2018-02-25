@@ -10,6 +10,7 @@ import { AppointmentDatesService } from './appointment-dates.service';
 import { CountriesList } from '../phone-info/country-codes';
 import { TimeSlotsMock } from './time-slot-mock';
 import { AppointmentsMock } from './appointment-data-mock';
+import { orderData } from '../schedule/order-data.interface';
 
 const timeSlotsMock = TimeSlotsMock;
 const appointmentsMock = AppointmentsMock;
@@ -36,7 +37,7 @@ export class AppointmentDatesServiceSub {
   }
 };
 
-const orderData = {
+const orderData: orderData = {
   hasAppointment: false,
   orderDetails: '',
   phoneInfo: CountriesList[1],

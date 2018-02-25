@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { personalisationProgress } from '../order-progress-bar/personalisation-progress.interface';
+import { orderData } from '../schedule/order-data.interface';
 
 @Component({
   templateUrl: './success.component.html',
   styleUrls: ['./success.component.css']
 })
 export class SuccessComponent implements OnInit {
-  lastOrder;
+  lastOrder: orderData;
   hasAppointment: boolean;
   personalisationProgress: personalisationProgress = {
     style: 'progress-100',

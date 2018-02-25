@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { orderData } from '../schedule/order-data.interface';
 
 @Component({
   selector: 'app-stylist-question',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class StylistQuestionComponent {
 
-  @Input() orderData;
+  @Input() orderData: orderData;
 
   toggleAppointment(): void {
     this.orderData.hasAppointment = !this.orderData.hasAppointment

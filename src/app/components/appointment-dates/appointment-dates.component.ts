@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { AppointmentDatesService } from './appointment-dates.service';
 import { DatePipe } from '@angular/common';
 
+import { orderData } from '../schedule/order-data.interface';
+
 @Component({
   selector: 'app-appointment-dates',
   templateUrl: './appointment-dates.component.html',
@@ -25,7 +27,7 @@ export class AppointmentDatesComponent implements OnInit {
     private appointmentDatesService: AppointmentDatesService
   ) { }
 
-  @Input() orderData;
+  @Input() orderData: orderData;
 
   ngOnInit() {
     this.loadAppointments();

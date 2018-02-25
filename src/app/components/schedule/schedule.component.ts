@@ -5,6 +5,9 @@ import { ScheduleService } from './schedule.service';
 
 import { personalisationProgress } from '../order-progress-bar/personalisation-progress.interface';
 import { CountriesList } from '../phone-info/country-codes';
+import { orderData } from './order-data.interface';
+
+const errorFeedback = 'Did you remember to write a phone number and pick up an appointment date?';
 
 @Component({
   templateUrl: './schedule.component.html',
@@ -18,7 +21,7 @@ export class ScheduleComponent {
     box: 'progress-25'
   };
 
-  orderData = {
+  orderData: orderData = {
     hasAppointment: false,
     orderDetails: '',
     phoneInfo: CountriesList[1],

@@ -2,8 +2,17 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StylistQuestionComponent } from './stylist-question.component';
 
-let orderData = {
-  hasAppointment : false
+import { CountriesList } from '../phone-info/country-codes';
+import { orderData } from '../schedule/order-data.interface';
+
+let orderData: orderData = {
+  hasAppointment: false,
+  orderDetails: '',
+  phoneInfo: CountriesList[1],
+  timeSlot: {
+    start: '',
+    date: ''
+  }
 };
 
 describe('StylistQuestionComponent', () => {
